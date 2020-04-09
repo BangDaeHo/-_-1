@@ -7,7 +7,7 @@
  */
 public class green
 {
-    public static void green(int speed){
+    public static void Green(int speed){
         System.out.println(speed);
     }
 }
