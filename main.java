@@ -16,7 +16,7 @@ public class main
         signal = scanner.next();
         
         if(signal.equals("green")){
-            
+            green(speed);
         }
         else if(signal.equals("yellow")){
             
