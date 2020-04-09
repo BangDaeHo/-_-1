@@ -19,10 +19,10 @@ public class main
             green.Green(speed);
         }
         else if(signal.equals("yellow")){
-            
+            yellow.yellow(speed);
         }
         else{
-            
+            red.red();
         }
     }
 }
