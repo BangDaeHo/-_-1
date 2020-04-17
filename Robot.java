@@ -7,15 +7,26 @@
  */
 public class Robot
 {
-    public static void RobotWalk(int speed, String signal){
+    double speed;
+    String signal;
+
+    public void setSpeed(double speed){
+        this.speed = speed;
+    }
+
+    public void setSingal(String signal){
+        this.signal = signal;
+    }
+
+    public double RobotWalk(double speed, String signal){
         if(signal.equals("green")){
-            System.out.println(speed);
+            return speed;
         }
         else if(signal.equals("yellow")){
-            System.out.println(speed * 1.2);
+            return speed * 1.2;
         }
         else{
-            System.out.println(0);
+            return 0;
         }
     }
 }

@@ -1,20 +1,62 @@
-import java.util.Scanner;
+
+
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
 /**
- * Write a description of class hi here.
+ * The test class RobotTest.
  *
- * @author (2018315021 방대호, 2018315051 야마모토 요시카)
- * @version (20200409)
+ * @author  (your name)
+ * @version (a version number or a date)
  */
 public class RobotTest
 {
-    public static void main(String [] args){
-        int speed = 60;
-        String signal;
+    /**
+     * Default constructor for test class RobotTest
+     */
+    public RobotTest()
+    {
+    }
+
+    /**
+     * Sets up the test fixture.
+     *
+     * Called before every test case method.
+     */
+    @Before
+    public void setUp()
+    {
+    }
+
+    /**
+     * Tears down the test fixture.
+     *
+     * Called after every test case method.
+     */
+    @After
+    public void tearDown()
+    {
+    }
+
+    @Test
+    public void Robor_yellow_Test()
+    {
+        Robot robot2 = new Robot();
+        robot2.setSingal("yellow");
+        robot2.setSpeed(60);
+        assertEquals(72.0, robot2.RobotWalk(60, "yellow"), 0.1);
         
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("신호를 입력하세요: ");
-        signal = scanner.next();
+        Robot robot3 = new Robot();
+        robot3.setSingal("green");
+        robot3.setSpeed(60);
+        assertEquals(60, robot3.RobotWalk(60, "green"), 0.1);
         
-        Robot.RobotWalk(speed, signal);
+        Robot robot4 = new Robot();
+        robot4.setSingal("red");
+        robot4.setSpeed(60);
+        assertEquals(0.0, robot4.RobotWalk(60, "red"), 0.1);
     }
 }
+
