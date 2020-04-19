@@ -17,16 +17,20 @@ public class Robot
     public void setSingal(String signal){
         this.signal = signal;
     }
+    
+    public double getSpeed(){
+       return this.speed;
+    }
 
-    public double RobotWalk(double speed, String signal){
+    public void RobotWalk(double speed, String signal){
         if(signal.equals("green")){
-            return speed;
+            
         }
         else if(signal.equals("yellow")){
-            return speed * 1.2;
+            this.speed *= 1.2;
         }
         else{
-            return 0;
+            this.speed = 0;
         }
     }
 }
