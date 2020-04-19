@@ -14,7 +14,7 @@ public class Robot
         this.speed = speed;
     }
 
-    public void setSingal(String signal){
+    public void setSignal(String signal){
         this.signal = signal;
     }
     
@@ -27,7 +27,7 @@ public class Robot
             
         }
         else if(signal.equals("yellow")){
-            this.speed *= 1.2;
+            this.speed = speed * 1.2;
         }
         else{
             this.speed = 0;
